@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- react依赖 -->
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    // 组件化实现
+    class App extends React.Component {
+      constructor() {
+        // 初始化父类实例
+        super()
+        this.state = {
+          msg: 'hello',
+          list: ['盗梦空间', '大话西游', '阿甘正传']
+        }
+      }
+      render() {
+        return (
+          <div>
+            <h1>电影列表</h1>
+            {
+              this.state.list.map((item, index) => {
+                return (
+                  // 唯一的key
+                  <li key={index}>{item}</li>
+                )
+              })
+            }
+          </div >
+        )
+      }
+    }
+    ReactDOM.render(<App />, document.getElementById('app'))
+  </script>
+</body>
+
+</html>
