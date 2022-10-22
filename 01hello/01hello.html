@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>react</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- react依赖 -->
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    // JSX
+    // 语法1
+    let msg = 'ReactDOM'
+    function btnClick() {
+      msg = '哈哈哈'
+      console.log('点击按钮');
+      render()
+    }
+
+    function render() {
+      ReactDOM.render(
+        <div>
+          <h1>{msg}</h1>
+          <button onClick={btnClick}>改变文字</button>
+        </div>
+        , document.getElementById('app'))
+    }
+
+    render()
+  </script>
+</body>
+
+</html>
