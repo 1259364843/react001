@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>条件渲染</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- react依赖 -->
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor(prop) {
+        // 初始化父类实例
+        super(prop)
+        this.state = {
+          isLogin: false
+        }
+      }
+      loginClick() {
+        this.setState({
+          isLogin: !this.state.isLogin
+        })
+      }
+      render() {
+        let welcome = null;
+        this.state.isLogin ? welcome = <h1>已登录</h1> : welcome = <h1>未登录</h1>
+        return (
+          <div>
+            {welcome}
+            <button onClick={e => this.loginClick()}>{this.state.isLogin ? '退出' : '登录'}</button>
+          </div >
+        )
+      }
+    }
+    ReactDOM.render(<App />, document.getElementById('app'))
+  </script>
+</body>
+
+</html>
