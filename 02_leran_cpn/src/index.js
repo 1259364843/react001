@@ -13,7 +13,11 @@ import './tabControl/tabControl.css';
 // import App from './06跨组件通信/02context.jsx';
 // import App from './07setState的使用/App.jsx';
 // import App from './08性能优化/组件嵌套的render调用.jsx';
-import App from './06跨组件通信/03全局事件传递.jsx';
+// import App from './06跨组件通信/03全局事件传递.jsx';
+// import App from './10受控组件&非受控组件/01ref使用.jsx';
+// import App from './10受控组件&非受控组件/02受控组件的基本使用.jsx';
+// import App from './10受控组件&非受控组件/03受控组件select的使用.jsx';
+import App from './10受控组件&非受控组件/04受控组件-多输入.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
