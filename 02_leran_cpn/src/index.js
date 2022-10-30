@@ -17,9 +17,12 @@ import './tabControl/tabControl.css';
 // import App from './10受控组件&非受控组件/01ref使用.jsx';
 // import App from './10受控组件&非受控组件/02受控组件的基本使用.jsx';
 // import App from './10受控组件&非受控组件/03受控组件select的使用.jsx';
-import App from './10受控组件&非受控组件/04受控组件-多输入.jsx';
+// import App from './10受控组件&非受控组件/04受控组件-多输入.jsx';
+// import App from './11高阶组件HOC/01高阶组件的定义.jsx';
+// import App from './11高阶组件HOC/03增强props.jsx';
+import App from './11高阶组件HOC/04应用鉴权.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App />
+    <App name="abc"/>
 );
