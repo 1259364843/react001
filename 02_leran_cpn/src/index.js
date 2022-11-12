@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import './tabControl/tabControl.css';
+
 // import App from './App';
 // import App from './01组件的定义方式/类组件.jsx';
 // import App from './01组件的定义方式/函数式组件.jsx';
@@ -28,7 +29,8 @@ import './tabControl/tabControl.css';
 // import App from './13样式/cssModules/app/index.jsx';
 // import App from './13样式/style-component/app/index.jsx';
 // import App from './14antd/index.jsx';
-import App from './14antd/classnames.jsx';
+// import App from './14antd/classnames.jsx';
+import App from './14antd/antd.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -20,3 +20,5 @@ code {
 	height: 100px;
 	background-color: aqua;
 }
+/* antd */
+@import "~antd/dist/antd.css";
