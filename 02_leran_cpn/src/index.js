@@ -20,7 +20,10 @@ import './tabControl/tabControl.css';
 // import App from './10受控组件&非受控组件/04受控组件-多输入.jsx';
 // import App from './11高阶组件HOC/01高阶组件的定义.jsx';
 // import App from './11高阶组件HOC/03增强props.jsx';
-import App from './11高阶组件HOC/04应用鉴权.jsx';
+// import App from './11高阶组件HOC/04应用鉴权.jsx';
+// import App from './11高阶组件HOC/05生命周期劫持.jsx';
+// import App from './12组件内容补充/01ref的转发.jsx';
+import App from './12组件内容补充/02portals使用.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
