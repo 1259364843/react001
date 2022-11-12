@@ -23,7 +23,12 @@ import './tabControl/tabControl.css';
 // import App from './11高阶组件HOC/04应用鉴权.jsx';
 // import App from './11高阶组件HOC/05生命周期劫持.jsx';
 // import App from './12组件内容补充/01ref的转发.jsx';
-import App from './12组件内容补充/02portals使用.jsx';
+// import App from './12组件内容补充/02portals使用.jsx';
+// import App from './13样式/01内联样式.jsx';
+// import App from './13样式/cssModules/app/index.jsx';
+// import App from './13样式/style-component/app/index.jsx';
+// import App from './14antd/index.jsx';
+import App from './14antd/classnames.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
