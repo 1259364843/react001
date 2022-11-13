@@ -30,7 +30,9 @@ import './tabControl/tabControl.css';
 // import App from './13样式/style-component/app/index.jsx';
 // import App from './14antd/index.jsx';
 // import App from './14antd/classnames.jsx';
-import App from './14antd/antd.jsx';
+// import App from './14antd/antd.jsx';
+// import App from './15axios/01axios基本使用.jsx';
+import App from './15axios/02拦截器.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
