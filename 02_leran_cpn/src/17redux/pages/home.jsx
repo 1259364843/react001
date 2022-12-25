@@ -27,13 +27,15 @@ export default class Home extends PureComponent {
     )
   }
   componentDidMount() {
-     store.subscribe(() => {
+    // 监听数据变化
+    this.unsubscribe = store.subscribe(() => {
         this.setState({
           counter: store.getState().counter
         })
     })
   }
 componentWillUnmount() {
+  console.log(1);
     this.unsubscribe()
 }
 }

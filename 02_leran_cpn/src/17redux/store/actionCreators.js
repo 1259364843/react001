@@ -11,10 +11,10 @@ export const subAction = (num) => ({
   num,
 });
 // +1
-export const incAction = () => ({
+export const increment = () => ({
   type: INCREMENT,
 });
 // -1
-export const decAction = () => ({
+export const decrement = () => ({
   type: DECREMENT,
 });
