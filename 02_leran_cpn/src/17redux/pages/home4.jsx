@@ -1,9 +1,14 @@
 import React, { PureComponent } from 'react'
-// 2.自定义connect函数
-import {connect} from '../connect.js'
+
+
+// 4.应用redux-thunk
+import {connect} from 'react-redux'
 // action
-import {increment,addAction} from '../store/actionCreators.js'
+import {increment,addAction, getMultidataAction} from '../store/actionCreators.js'
 class Home2 extends PureComponent {
+  componentDidMount() {
+    this.props.getHomeMultidata();
+  }
   render() {
     return (
       <div>
@@ -30,6 +35,12 @@ const mapDispatchToProp = dispatch => {
     // 加num
     addAction: function(num) {
       dispatch(addAction(num))
+    },
+    // 改变轮播图
+    getHomeMultidata() {
+      // dispatch不再传入对象,而是函数
+      // 此函数会被主动调用
+      dispatch(getMultidataAction)
     }
   }
 }

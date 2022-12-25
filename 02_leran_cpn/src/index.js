@@ -36,7 +36,12 @@ import './tabControl/tabControl.css';
 // import App from './16动画/01CSSTransition.jsx';
 import App from './17redux/01redux.jsx';
 
+import store from './17redux/store';
+import { Provider } from 'react-redux';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App name="abc"/>
+  <Provider store={store}>
+  <App name="abc"/>
+  </Provider>
+    
 );
