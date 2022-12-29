@@ -1,16 +1,13 @@
 import { INCREMENT, DECREMENT, ADD_NUMBER, SUB_NUMBER, CHANGE_BANNERS, CHANGE_RECOMMENDS } from "./constants.js";
 
 // 默认数据
-// const defaultState = {
-//   counter: 0,
-//   banners: [],//轮播图,默认空数组
-//   recommends: []//推荐列表
-// };
-const CountState = {
+const defaultState = {
   counter: 0,
+  banners: [],//轮播图,默认空数组
+  recommends: []//推荐列表
 };
-// 拆分reducer
-function counterReducer(state = CountState, action){
+
+function reducer(state = defaultState, action) {
   switch (action.type) {
     case INCREMENT:
       // 拿到原来的state
@@ -21,16 +18,6 @@ function counterReducer(state = CountState, action){
       return { ...state, counter: state.counter + action.num };
     case SUB_NUMBER:
       return { ...state, counter: state.counter - action.num };
-    default:
-      return state;
-  }
-}
-const HomeState = {
-  banners: [],//轮播图,默认空数组
-  recommends: []//推荐列表
-};
-function homeReducer(state = HomeState, action){
-  switch (action.type) {
     case CHANGE_BANNERS:
       // 返回state和传递过来的banners
       return {...state, banners: action.banners};
@@ -39,16 +26,6 @@ function homeReducer(state = HomeState, action){
     default:
       return state;
   }
-}
-
-// 合并reducer
-function reducer(state = {}, action) {
-  // 返回一个对象
-  return {
-    counterInfo: counterReducer(state.CountState, action),
-    homeInfo: homeReducer(state.HomeState, action)
-  }
-  
 }
 
 export default reducer

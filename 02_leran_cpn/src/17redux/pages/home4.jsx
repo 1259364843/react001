@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 import {increment,addAction, getMultidataAction} from '../store/actionCreators.js'
 class Home2 extends PureComponent {
   componentDidMount() {
+    console.log(this.props);
     this.props.getHomeMultidata();
   }
   render() {

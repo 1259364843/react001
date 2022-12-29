@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <a href="#/home">首页</a>
+    <a href="#/about">关于</a>
+    <div id="router-view">
+    </div>
+  </div>
+</body>
+<script>
+  const routerView = document.getElementById('router-view')
+  window.addEventListener('hashchange', () => {
+    console.log('hash改变');
+    switch (location.hash) {
+      case '#/home':
+        routerView.innerHTML = "<h2>首页</h2>"
+        break;
+      case '#/about':
+        routerView.innerHTML = "<h2>关于</h2>"
+        break;
+      default:
+        routerView.innerHTML = ""
+        break;
+    }
+  })
+</script>
+
+</html>

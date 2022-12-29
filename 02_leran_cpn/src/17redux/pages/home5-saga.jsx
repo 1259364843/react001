@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 import {increment,addAction, fetchHomeMultidataAction} from '../store/actionCreators.js'
 class Home2 extends PureComponent {
   componentDidMount() {
+    // console.log(this.props);
     this.props.getHomeMultidata();
   }
   render() {
@@ -23,7 +24,7 @@ class Home2 extends PureComponent {
 }
 const mapStateToProps = state => {
   return {
-    counter: state.counter
+    counter: state.counterInfo.counter
   }
 }
 const mapDispatchToProp = dispatch => {
