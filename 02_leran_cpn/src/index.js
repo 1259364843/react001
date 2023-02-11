@@ -35,7 +35,8 @@ import './tabControl/tabControl.css';
 // import App from './15axios/02拦截器.jsx';
 // import App from './16动画/01CSSTransition.jsx';
 // import App from './17redux/01redux.jsx';
-import App from './18router/app.jsx';
+// import App from './18router/app.jsx';
+import App from './19Hook/App.jsx';
 
 import store from './17redux/store';
 import { Provider } from 'react-redux';
