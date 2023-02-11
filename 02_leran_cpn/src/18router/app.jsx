@@ -10,6 +10,9 @@ import {
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Login from "./pages/Login";
+import User from "./pages/User";
+import Detail from "./pages/detail";
 function App() {
 	return (
 		<div>
@@ -48,6 +51,23 @@ function App() {
           {/*Route用于路径匹配,exact精准匹配*/}
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+      {/*重定向*/}
+      <hr />
+      <h5>重定向</h5>
+      <BrowserRouter>
+        <NavLink to="/" activestyle={{color: "red"}}>首页</NavLink>
+        <NavLink to="/about" activestyle={{color: "red"}}>关于</NavLink>
+        <NavLink to="/user" activestyle={{color: "red"}}>用户</NavLink>
+        <NavLink to="/login" activestyle={{color: "red"}}>登录</NavLink>
+        <NavLink to="/detail/abc" activestyle={{color: "red"}}>详情</NavLink>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/detail/:id" element={<Detail />} />
         </Routes>
       </BrowserRouter>
       </div>
